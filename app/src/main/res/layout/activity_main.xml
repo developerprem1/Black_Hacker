@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    tools:context=".MainActivity">
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_above="@id/banner_ads"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:id="@+id/textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="cursive"
+                            android:textColor="@color/textColor"
+                            android:text="Hello Hackers!!!"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/syne"
+                            android:text="Find your topics which\nyou want to learn"
+                            android:textColor="@color/textColor"
+                            android:textSize="24sp"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/textColor"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:text="All topics given below!!!"/>
+                    </LinearLayout>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_toRightOf="@+id/textview"
+                        android:src="@drawable/logo" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:id="@+id/row1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/welcome"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/networkingFun"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/cn" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/textColor"
+                            android:text="Networking Fundamentals" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/operatingSystem"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:weightSum="2"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/os"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/textColor"
+                            android:text="Operating Systems" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/welcome"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/programmingScript"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/programming_scriptin" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/textColor"
+                            android:text="Programming and Scripting" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cyberSecurity"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:weightSum="2"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/cyber_security"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/textColor"
+                            android:text="Cybersecurity Basics" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/welcome"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/informationGath"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/information_gathering" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/textColor"
+                            android:text="Information Gathering" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/scanningEnum"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:weightSum="2"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/scanning_enum"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/textColor"
+                            android:text="Scanning and Enumeration" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/welcome"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/vulnerability"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/vulnerability" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/textColor"
+                            android:text="Vulnerability Assessment" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/exlotation"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:weightSum="2"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/exploit"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/textColor"
+                            android:text="Exploitation" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/welcome"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/webApp"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/web_application" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/textColor"
+                            android:text="Web Application Security" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/networkSecurity"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:weightSum="2"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/network_security"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/textColor"
+                            android:text="Network Security" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/welcome"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/wirelessSecurity"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/wireless" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/textColor"
+                            android:text="Wireless Security" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/socialEngi"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:weightSum="2"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/socia_engineering"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/textColor"
+                            android:text="Social Engineering" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/welcome"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/forensics"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/digital_forensics"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/textColor"
+                            android:text="Forensics and Incident Response" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/crypthography"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:weightSum="2"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/cryptography"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/textColor"
+                            android:text="Cryptography" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/welcome"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/metasploit"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/metasploit" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/textColor"
+                            android:text="Metasploit Framework" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/firewall"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:weightSum="2"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/firewall"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/textColor"
+                            android:text="Firewalls and Intrusion Detection Systems (IDS)" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/welcome"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/buffer"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/buffer" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/textColor"
+                            android:text="Buffer Overflows" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/reverseEng"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:weightSum="2"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/reverse_eng"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/textColor"
+                            android:text="Reverse Engineering" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/welcome"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/legalEthical"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ethical_aspect" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/textColor"
+                            android:text="Legal and Ethical Aspects" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/certificate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:weightSum="2"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/certificate"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/textColor"
+                            android:text="Certifications" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/welcome"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/experience"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/experience" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/textColor"
+                            android:text="Practical Experience" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bugBounty"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:weightSum="2"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/bug"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/textColor"
+                            android:text="Bug Bounty Programs" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/welcome"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/hackingTools"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/tools" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/textColor"
+                            android:text="Hacking Tools" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:itemIconTint="@color/black"
+            app:headerLayout="@layout/header_nav"
+            app:menu="@menu/navigation_menu"
+            android:fitsSystemWindows="true" />
+    </androidx.drawerlayout.widget.DrawerLayout>
+    <LinearLayout
+        android:id="@+id/banner_ads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" />
+</RelativeLayout>
